@@ -157,8 +157,6 @@ int main (){
         posisiSisip = digitTerakhir + 1;
     }
 
-
-
     do {
         cout << "\n================================================\n";
         cout << "|          GAME INVENTORY MANAGEMENT              |\n";
