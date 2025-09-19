@@ -160,17 +160,17 @@ int main (){
 
 
     do {
-        cout << "\n=================================================\n";
+        cout << "\n================================================\n";
         cout << "|          GAME INVENTORY MANAGEMENT              |\n";
         cout << "|         " << nama << " - " << nim << "                        |\n";
-        cout << "\n=================================================\n";
+        cout << "\n================================================\n";
         cout << "| 1. Tambah Item Baru                             |\n";
         cout << "| 2. Sisipkan Item                                |\n";
         cout << "| 3. Hapus Item Terakhir                          |\n";
         cout << "| 4. Gunakan Item                                 |\n";
         cout << "| 5. Tampilkan Inventory                          |\n";
         cout << "| 0. Keluar                                       |\n";
-        cout << "\n==================================================\n";
+        cout << "\n=================================================\n";
         cout << "Pilihan: ";
         cin >> pilihan;
         cin.ignore();
@@ -197,8 +197,16 @@ int main (){
                 break;
         
             case 3:
-                hapusItemTerakhir(head, tail);
-                break;
+                cout << "Apakah abang yakin ingin menghapus item terakhir? (y/n): ";
+                char konfirmasi;
+                cin >> konfirmasi;
+                if (konfirmasi == 'y') {
+                    hapusItemTerakhir(head, tail);
+                    break;
+                }else {
+                    cout << "Item tidak jadi dihapus." << endl;
+                    break;
+                }
         
             case 4:
                 cout << "Masukkan nama item yang ingin digunakan: ";
