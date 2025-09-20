@@ -147,14 +147,14 @@ int main (){
     string nama = "Dnt";
     string nim = "2409106061";
 
-    int duaDigit = (nim[nim.length() - 2] - '0') * 10 + (nim[nim.length() - 1] - '0');
-    int digitTerakhir = nim[nim.length() - 1] - '0';
+    int jumlahItem = (nim[nim.length() - 2] - '0') * 10 + (nim[nim.length() - 1] - '0');
+    int posisiItem = nim[nim.length() - 1] - '0';
 
     int posisiSisip;
-    if (digitTerakhir == 0) {
+    if (posisiItem == 0) {
         posisiSisip = 2;
     } else {
-        posisiSisip = digitTerakhir + 1;
+        posisiSisip = posisiItem + 1;
     }
 
     do {
@@ -179,9 +179,7 @@ int main (){
                 getline(cin, namaItem);
                 cout << "Masukkan tipe item: ";
                 getline(cin, tipe);
-                cout << "Masukkan jumlah item: ";
-                cin >> jumlah;
-                tambahItem(head, jumlah, namaItem, tipe);
+                tambahItem(head, jumlahItem, namaItem, tipe);
                 break;
         
             case 2:
@@ -189,9 +187,7 @@ int main (){
                 getline(cin, namaItem);
                 cout << "Masukkan tipe item: ";
                 getline(cin, tipe);
-                cout << "Masukkan jumlah item: ";
-                cin >> jumlah;
-                sisipkanItem(head, jumlah, namaItem, tipe, posisiSisip);
+                sisipkanItem(head, jumlahItem, namaItem, tipe, posisiSisip);
                 break;
         
             case 3:
